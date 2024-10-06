@@ -100,8 +100,61 @@
  * Variabel yang dideklarasikan sebagai const bersifat compile-time constants, artinya nilai tersebut harus sudah diketahui sebelum program dijalankan. Sedangkan final, nilainya masih bisa diinisialisasi ketika runtime atau ketika aplikasi berjalan. Sebagai contoh kode berikut:
 */
 
-void main() {
-  final name = 'hamzah';
+// void main() {
+//   final name = 'hamzah';
 
-  print(name);
+//   print(name);
+// }
+
+// * Null safety
+
+/*
+ * Null safety sangat berguna untuk membuat kode menjadi lebih aman karena proses yang melibatkan nilai null dapat dibatasi dan ditemukan lebih awal.
+*/
+
+// void main() {
+//   String? favoriteFood = null;
+//   buyMeal(favoriteFood!);
+// }
+
+// void buyMeal(favoriteFood) {
+//   if (favoriteFood == null) {
+//     print('I like Nasi goreng');
+//   } else {
+//     print('I like $favoriteFood');
+//   }
+// }
+
+// * Control Flow
+// * If and else
+
+// void main() {
+//   int score = 71;
+//   print('Nilai anda ${calculateScore(score)}');
+// }
+
+// String calculateScore(num score) {
+//   if (score > 90) {
+//     return 'a';
+//   } else if (score > 80) {
+//     return 'b';
+//   } else if (score > 70) {
+//     return 'c';
+//   } else if (score > 60) {
+//     return 'd';
+//   }
+//   return 'e';
+// }
+
+// * if else conditional expression (ternary operator in javascript)
+void main() {
+  const now = 20;
+  String? customer;
+  const closedHour = 21;
+  String shopHours = now > closedHour ? 'We are open' : 'we are closed';
+  String buyer = customer ?? 'user';
+  String customerDecision = shopHours == 'We are open'
+      ? '$buyer will go shopping if $shopHours'
+      : '$buyer will not go shopping because $shopHours';
+  print(customerDecision);
 }
