@@ -146,15 +146,159 @@
 //   return 'e';
 // }
 
-// * if else conditional expression (ternary operator in javascript)
-void main() {
-  const now = 20;
-  String? customer;
-  const closedHour = 21;
-  String shopHours = now > closedHour ? 'We are open' : 'we are closed';
-  String buyer = customer ?? 'user';
-  String customerDecision = shopHours == 'We are open'
-      ? '$buyer will go shopping if $shopHours'
-      : '$buyer will not go shopping because $shopHours';
-  print(customerDecision);
-}
+// // * if else conditional expression (ternary operator in javascript)
+// void main() {
+//   const now = 20;
+//   String? customer;
+//   const closedHour = 21;
+//   String shopHours = now > closedHour ? 'We are open' : 'we are closed';
+//   String buyer = customer ?? 'user';
+//   String customerDecision = shopHours == 'We are open'
+//       ? '$buyer will go shopping if $shopHours'
+//       : '$buyer will not go shopping because $shopHours';
+//   print(customerDecision);
+// }
+
+// * For loop
+// void main() {
+//   String star = '';
+//   for (int i = 0; i < 10; i++) {
+//     for (int j = 0; j < 1 + i; j++) {
+//       star += '*';
+//     }
+//     star += '\n';
+//   }
+//   print(star);
+// }
+
+// * While do
+// void main() {
+//   int i = 1;
+//   while (i <= 100) {
+//     print(i);
+//     i++;
+//   }
+// }
+
+// * Break and continue
+// void main() {
+//   List<int> primeNumbers = [
+//     2,
+//     3,
+//     5,
+//     7,
+//     11,
+//     13,
+//     17,
+//     19,
+//     23,
+//     29,
+//     31,
+//     37,
+//     41,
+//     43,
+//     47,
+//     53,
+//     59,
+//     61,
+//     67,
+//     73,
+//     79,
+//     83,
+//     89,
+//     97
+//   ];
+
+//   int findNumber = 29;
+//   print('bilangan prima di antara 1-100: $findNumber');
+
+//   for (int i = 0; i < primeNumbers.length; i++) {
+//     if (findNumber == primeNumbers[i]) {
+//       print('$findNumber adalah bilangan prima ke-${i + 1}');
+//       break;
+//     }
+//     print('$findNumber != ${primeNumbers[i]}');
+//   }
+// }
+
+// void main() {
+//   for (int i = 0; i < 10; i++) {
+//     if (i % 2 == 1) {
+//       continue;
+//     }
+//     print(i);
+//   }
+// }
+
+// * Switch case
+// void main() {
+//   const int firstNumber = 20;
+//   const int secondNumber = 30;
+//   const String operator = '+';
+//   num result = miniCalculator(firstNumber, secondNumber, operator);
+//   print('The result would be: $result');
+// }
+
+// num miniCalculator(int firstNumber, int secondNumber, String operator) {
+//   num result = 0;
+//   switch (operator) {
+//     case '+':
+//       return result = firstNumber + secondNumber;
+//     case '-':
+//       return result = firstNumber - secondNumber;
+//   }
+//   return result;
+// }
+
+// * Collection
+// * List
+
+// void main() {
+//   List<String> favoriteFood = ['Donuts', 'Pizza', 'Noodle', 'Fried Rice'];
+
+//   // * Looping list item
+//   // for (int i = 0; i < favoriteFood.length; i++) {
+//   //   print(favoriteFood[i]);
+//   // }
+
+//   // favoriteFood.forEach((item) => print(item));
+
+//   favoriteFood.add(
+//       'Rice Krispies'); // Fungsi add ini akan menambahkan data di akhir list.
+
+//   favoriteFood.insert(0,
+//       'Steak'); // Di dalam fungsi insert kita perlu memasukkan 2 parameter, yaitu indeks list dan data yang akan dimasukkan.
+
+//   favoriteFood[2] = 'Fish Fillet';
+
+//   // Sedangkan untuk menghapus data terdapat beberapa fungsi remove
+//   // Menghapus list pada index ke-1
+//   favoriteFood.removeAt(1);
+
+//   // Menghapus data list terakhir
+//   favoriteFood.removeLast();
+
+//   // Menghapus list mulai index ke-0 sampai ke-1 (indeks 2 masih dipertahankan)
+//   favoriteFood.removeRange(0, 1);
+
+//   for (var item in favoriteFood) {
+//     print(item);
+//   }
+
+//   // * Spread operator
+//   List<String>? colors = ['blue', 'green', 'red'];
+//   List<int> number = [
+//     1,
+//     2,
+//     3,
+//   ];
+//   dynamic colorByNumber = [...colors, ...number];
+
+//   List<String>? list;
+//   var list2 = [
+//     0,
+//     ...?list
+//   ]; // spread operator null-aware untuk mengatasi List yang bisa bernilai null
+
+//   print(list2);
+// }
