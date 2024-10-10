@@ -5,8 +5,8 @@
 */
 
 void main() {
-  String? favoriteFood = null;
-  buyMeal(favoriteFood!);
+  String? favoriteFood;
+  buyMeal(favoriteFood);
 }
 
 void buyMeal(favoriteFood) {
